@@ -5,9 +5,7 @@ import Image from 'next/image';
 import Link from '@/components/Link';
 import FadeIn from '@/components/FadeIn';
 import Carousel from '@/components/Carousel';
-
-import dynamic from 'next/dynamic';
-const Me = dynamic(() => import('@/components/Three/Me'), { ssr: false });
+import Me from '@/components/Three/Me';
 
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
