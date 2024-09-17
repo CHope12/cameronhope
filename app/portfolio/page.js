@@ -82,7 +82,7 @@ const techIcons = [
 const portfolioItems = [
   {
     title: "Photography Portfolio Website",
-    image: "/images/3.jpg",
+    image: "/images/screen1.jpg",
     type: "Freelance development",
     link: "https://eleanorwakefield.com/",
     description: "A website I created for a local photographer. The website is built using Next.js and is hosted on Vercel. The website features portfolio and project galleries of the artist's work, and a contact form.",    
@@ -91,7 +91,7 @@ const portfolioItems = [
   },
   {
     title: "Calorie Counter",
-    image: "/images/test.jpg",
+    image: "/images/screen2.jpg",
     type: "Personal project",
     link: "https://calorie-counter-psi.vercel.app/",
     description: "A web application I created which allows users to track their daily calorie intake and set goals for their daily intake. The app features Auth0 user authentication system and a MongoDB database to store user data.",
@@ -100,7 +100,7 @@ const portfolioItems = [
   },
   {
     title: "Finance Tracker",
-    image: "/images/screen4.jpg",
+    image: "/images/screen3.jpg",
     type: "Personal project",
     link: "https://finance-app-psi.vercel.app/",
     description: "A web application I created which allows users to track their daily, weekly and monthly expenses and income. The app features a user authentication and data storage using Firebase.",
@@ -109,7 +109,7 @@ const portfolioItems = [
   },
   {
     title: "Multiplayer Fighter Game",
-    image: "/images/screen3.jpg",
+    image: "/images/screen4.jpg",
     type: "University project",
     link: "",
     description: "For my final year project in university, I created a multiplayer fighting game using Unity and C#. The game features a lobby system, character selection, and fighting mechanics. Player can start a server and connect to each other over the internet using a lobby code.",

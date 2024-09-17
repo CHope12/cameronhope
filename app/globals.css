@@ -145,6 +145,10 @@ body {
               opacity 0.25s;
 }
 
+.fadeInMe {
+  transition: opacity 1s;
+}
+
 .embla__slide {
   flex: 0 0 100%;
 }

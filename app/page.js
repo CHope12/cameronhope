@@ -5,7 +5,9 @@ import Image from 'next/image';
 import Link from '@/components/Link';
 import FadeIn from '@/components/FadeIn';
 import Carousel from '@/components/Carousel';
-import Me from "@/components/Three/Me";
+
+import dynamic from 'next/dynamic';
+const Me = dynamic(() => import('@/components/Three/Me'), { ssr: false });
 
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -116,26 +118,8 @@ export default function Home() {
     }
   }, [color, tempColor])
 
-  /*Resize listener
 
-  const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 768;
-
-  function handleWindowSizeChange() {
-      setWidth(window.innerWidth);
-    }
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowSizeChange);
-    return () => {
-      window.removeEventListener('resize', handleWindowSizeChange);
-    }
-  }, []);
-
-  const mobile = () => {    
-    return width < breakpoint;
-  }
-  */
+  //Mobile
 
   const [mobile, setMobile] = useState(false);
 
@@ -152,15 +136,25 @@ export default function Home() {
     }
   }, []);
 
-  return (
-    <main className="flex justify-center items-center md:p-16">
-    <div className="flex h-full w-full max-w-5xl items-center justify-center">
-      <div id="cards" className="grid h-[150vh] md:h-full md:min-h-[1100px] w-full gap-4 p-3 pb-5 md:p-0 md:pb-0 grid-cols-10 grid-rows-15 md:grid-rows-10 rounded-lg">
+  //Loaded
+
+  const [loaded, setLoaded] = useState(false);  
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoaded(true);
+    }, 1500);
+  });
+
+  return (    
+    <main className="flex justify-center items-center md:px-16 md:py-4">    
+    <div className="flex h-full w-full max-w-5xl items-center justify-center">    
+      <div id="cards" className="grid h-[150vh] md:h-full md:min-h-[1100px] xl:min-h-[calc(100vh-2rem)] w-full gap-4 p-3 pb-5 md:p-0 md:pb-0 grid-cols-10 grid-rows-15 md:grid-rows-8 rounded-lg">
         <FadeIn className="card col-span-10 md:col-span-7 row-span-4 rounded-lg shadow-md flex items-center justify-center" delay={0}>
           <div className="card-content flex text-white"> 
-            <div className="absolute right-0 w-[55%] md:w-1/2 h-full">
-              <Me className="w-full h-full"/>
-            </div>
+            <div className="absolute right-0 w-[55%] md:w-1/2 h-full">              
+              {loaded && <Me className={`w-full h-full`}/> }
+            </div>            
             <div className="absolute flex flex-col p-4 md:p-6 gap-1 w-[60%] md:w-1/2">
               <span className="text-md text-gray-600">Welcome</span>
               <span className="text-[2.9vw] md:text-lg text-gray-300">
@@ -170,22 +164,22 @@ export default function Home() {
             </div>
             <div className="absolute bottom-0 left-0 m-6 flex gap-2 hero-links">
               <a href="https://github.com/CHope12">
-                <button className="border-2 rounded-lg px-4 py-2 bg-slate-800 text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
+                <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <FaGithub />
                 </button>
               </a>
               <Link href="">
-                <button className="border-2 rounded-lg px-4 py-2 bg-slate-800 text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
+                <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <FaLinkedin />
                 </button>
               </Link>
               <Link href="">
-                <button className="border-2 rounded-lg px-4 py-2 bg-slate-800 text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
+                <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <PiReadCvLogoBold />
                 </button>
               </Link>
               <a href="mailto:cameron@cameronhope.co.uk">
-                <button className="border-2 rounded-lg px-4 py-2 bg-slate-800 text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
+                <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <MdMailOutline />
                 </button>
               </a>
@@ -399,16 +393,14 @@ export default function Home() {
         </FadeIn>
         )}
 
-        <FadeIn className="card col-span-5 md:col-span-2 row-span-2 md:row-span-1 rounded-lg shadow-md flex items-center justify-center" delay={mobile ? 900 : 1000}>        
+        <FadeIn className="card col-span-5 md:col-span-2 row-span-2 md:row-span-1 rounded-lg shadow-md flex items-center justify-center" delay={mobile ? 900 : 1000}>
           <div className="card-content flex items-center justify-center">
             <p className="text-white text-[3vw] md:text-[1.25vw] lg:text-sm flex flex-col text-center"><span>© {new Date().getFullYear()} • Made with <span className="text-red-500">♥</span></span> by Cameron Hope</p>
           </div>
         </FadeIn>
 
       </div>
-
-    </div>
-
+    </div>    
     </main>
   );
 }

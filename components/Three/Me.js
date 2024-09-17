@@ -49,7 +49,7 @@ const Me = () => {
     >
       <CameraSetup />
       <ambientLight intensity={2} />
-      <ModelWithAnimation />          
+      <ModelWithAnimation />
     </Canvas>
   );
 };
