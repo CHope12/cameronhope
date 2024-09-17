@@ -3,25 +3,148 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --font-helvetica: 'Helvetica', sans-serif;
+  --bg-color: rgb(20, 20, 20);
+  --card-color: rgb(23, 23, 23);
+  --hover-color: rgba(255, 255, 255, 0.06);
+  --solid-color: rgb(255, 255, 255);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  background-color: var(--bg-color);
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-color);
+  font-family: var(--font-helvetica);
+  height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.mainBackground {  
+  background-size: 75px 75px;
+  background-image:
+    linear-gradient(to right, #373737 1px, transparent 1px),
+    linear-gradient(to bottom, #373737 1px, transparent 1px);
+}
+
+.fadeBackground {
+  background-image: 
+    linear-gradient(to bottom, rgba(20, 20, 20, 0) 10%, rgba(20, 20, 20, 1) 66%, rgba(20, 20, 20, 1) 100%);
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  position: relative;
+  transition: transform 300ms;
+}
+
+.card::before,
+.card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+.card::before {
+  background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), var(--hover-color), transparent 40%);
+  z-index: 3;
+}
+
+.card::after {
+  background: radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), var(--hover-color), transparent 40%);
+  z-index: 1;
+}
+
+.card-content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  position: absolute;
+  inset: 1px;
+  padding: 10px;
+}
+
+.card-content-no-padding{
+  background-color: var(--card-color);
+  border-radius: inherit;
+  position: absolute;
+  inset: 1px;
+}
+
+.card-content div, .card-content-no-padding div {
+  z-index: 4;
+}
+
+.card-content p {
+  z-index: 5;
+}
+
+.planet {
+  z-index: 4;
+}
+
+.card:hover::before,
+.card:hover::after {
+  opacity: 1;
+}
+
+.hero-links button {
+  border-color: var(--solid-color);
+}
+
+.hero-links button:hover {
+  background-color: var(--solid-color);  
+  color: "black";  
+}
+
+#backButton {
+  z-index: 99;
+}
+
+.hoverIcon {
+  transition: scale 0.1s;
+}
+
+.hoverIcon:hover {
+  scale: 1.25;
+  color: rgb(20, 20, 20);
+}
+
+.portfolioItem {
+  transition: transform 0.5s ease-in-out;
+}
+
+.portfolioItem:hover{
+  transform: translateY(-3%);
+}
+
+.hoverImage {
+  transition: 
+    transform 0.5s ease-in-out,
+    opacity 0.1s ease-in-out;
+}
+
+.portfolioItem:hover .hoverImage, .card:hover .hoverImage {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.hoverParent:hover .hoverImage {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.fadeInComponent {
+  transition: transform 0.5s,
+              opacity 0.25s;
+}
+
+.embla__slide {
+  flex: 0 0 100%;
 }
