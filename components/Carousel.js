@@ -54,6 +54,7 @@ const Carousel = () => {
   return (
     <div className="embla w-full h-full overflow-hidden" ref={emblaRef}>
       <div className="embla__container flex w-full h-full">
+        {/*
         {images.map((src, index) => (
           <div className="embla__slide relative" key={index}>
             {/*
@@ -65,10 +66,41 @@ const Carousel = () => {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover rounded-lg absolute"
             />
-            */}
+            
             <BlurImage src={src} alt={"Gallery Image" + index} />
-          </div>
-        ))}        
+          </div>        
+        ))}     
+        */} 
+        <div className="embla__slide relative">
+          <BlurImage src={image1} alt="Gallery Image 1" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image2} alt="Gallery Image 2" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image3} alt="Gallery Image 3" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image4} alt="Gallery Image 4" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image5} alt="Gallery Image 5" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image6} alt="Gallery Image 6" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image7} alt="Gallery Image 7" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image8} alt="Gallery Image 8" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image9} alt="Gallery Image 9" />
+        </div>
+        <div className="embla__slide relative">
+          <BlurImage src={image10} alt="Gallery Image 10" />
+        </div>  
       </div>
     </div>
   )
