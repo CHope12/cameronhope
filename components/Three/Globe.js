@@ -77,7 +77,7 @@ Object.keys(geojson).forEach((region) => {
 });
 
 //Country class
-const Country = ({ coordinates, color, id, onClick }) => {    
+const Country = ({ coordinates, color }) => {    
 
   const geometry = useRef();
   const [isHovering, setIsHovering] = useState(false);
@@ -89,7 +89,7 @@ const Country = ({ coordinates, color, id, onClick }) => {
   return (              
     <mesh>
       <countryBufferGeometry ref={geometry} />      
-      <meshStandardMaterial color={color} onPointerOver={() => console.log(id)}/>                  
+      <meshStandardMaterial color={color} />                  
     </mesh>
   );
 };
