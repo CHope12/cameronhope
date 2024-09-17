@@ -290,13 +290,13 @@ export default function Home() {
           <div className="card-content-no-padding flex flex-col p-6">
             <div className="flex justify-between items-center">
               <p className="text-gray-600">Now</p>          
-              <div className="flex justify-center items-center">
-                <div className="bg-green-500 rounded-full w-[10px] h-[10px] md:w-[12.5px] md:h-[12.5px] flex justify-center items-center relative">
-                  <div className="absolute bg-green-500 bg-opacity-60 rounded-full w-[15px] h-[15px] md:w-[22.5px] md:h-[22.5px] animate-pulse" />
+              <div className="flex justify-center items-center pb-1">
+                <div className="bg-green-500 rounded-full w-[9px] h-[9px] md:w-[13.5px] md:h-[13.5px] flex justify-center items-center relative">
+                  <div className="absolute bg-green-500 bg-opacity-60 rounded-full w-[15px] h-[15px] md:w-[19px] md:h-[19px] animate-pulse" />
                 </div>
               </div>
             </div>            
-            <p className="text-gray-400 text-[3.5vw] md:text-[1.25vw] lg:text-sm">I am currently working as a freelancer making websites and doing home computer repair services</p>            
+            <p className="text-gray-400 text-[3.5vw] md:text-[1.25vw] lg:text-sm pt-1">I am currently working as a freelancer making websites and doing home computer repair services</p>            
           </div>        
         </FadeIn>      
 
