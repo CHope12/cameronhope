@@ -15,7 +15,7 @@ const geistMono = localFont({
 const helvetica = localFont({
   src: [
     {
-      path: "./fonts/Helvetica-bold.ttf",
+      path: "./fonts/Helvetica-Bold.ttf",
       weight: "700"
     },
     {
