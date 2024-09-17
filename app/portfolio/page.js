@@ -90,10 +90,10 @@ const portfolioItems = [
     textColor: "white",
   },
   {
-    title: "Calorie Counter",
+    title: "Calorie Counter (WIP)",
     image: "/images/screen2.jpg",
     type: "Personal project",
-    link: "https://calorie-counter-psi.vercel.app/",
+    link: "./",
     description: "A web application I created which allows users to track their daily calorie intake and set goals for their daily intake. The app features Auth0 user authentication system and a MongoDB database to store user data.",
     tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "MongoDB" || tech.name === "Node.js" || tech.name === "Express" || tech.name === "Mongoose" || tech.name === "Auth0" || tech.name === "Tailwind CSS"),
     textColor: "black",
