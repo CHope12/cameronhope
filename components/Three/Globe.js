@@ -77,7 +77,7 @@ Object.keys(geojson).forEach((region) => {
 });
 
 //Country class
-const Country = ({ coordinates, color }) => {    
+const Country = ({ coordinates, color, id, onClick }) => {    
 
   const geometry = useRef();
   const [isHovering, setIsHovering] = useState(false);

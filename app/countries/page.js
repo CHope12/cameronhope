@@ -1,10 +1,14 @@
 "use client";
 import BackButton from '@/components/BackButton'
 import React, { useState } from 'react'
-import Globe from '@/components/Three/Globe'
+
+import dynamic from 'next/dynamic';
 
 import { FaPlay } from "react-icons/fa";
 import { FaStop } from "react-icons/fa";
+
+//import Globe from '@/components/Three/Globe'
+const Globe = dynamic(() => import('@/components/Three/Globe'), { ssr: false });
 
 const page = () => {
 
