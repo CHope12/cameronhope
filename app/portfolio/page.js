@@ -102,7 +102,7 @@ const portfolioItems = [
     title: "Finance Tracker",
     image: "/images/screen3.jpg",
     type: "Personal project",
-    link: "https://finance-app-psi.vercel.app/",
+    link: "https://finance.cameronhope.co.uk/",
     description: "A web application I created which allows users to track their daily, weekly and monthly expenses and income. The app features a user authentication and data storage using Firebase.",
     tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "Firebase" || tech.name === "Tailwind CSS"),
     textColor: "black",
@@ -125,7 +125,7 @@ const Page = () => {
   return (
     <>
       <BackButton />          
-      <div className="flex flex-wrap h-full py-6 items-center justify-center gap-12 pt-28">
+      <div className="flex flex-wrap h-full pb-12 md:pb-6 items-center justify-center gap-12 pt-28">
         {portfolioItems.map((item, index) => (          
             <div 
               key={index}

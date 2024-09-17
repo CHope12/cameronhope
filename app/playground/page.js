@@ -31,12 +31,12 @@ const Page = () => {
   return (
     <>
     <BackButton />
-    <div className="flex pt-16 px-4 justify-center items-center">
+    <div className="flex pt-24 md:pt-16 px-4 justify-center items-center">
       <p className="text-lg text-gray-300 text-center">
         A collection of Three.js scenes I made inspired by <a href="https://www.gleec.com/" className="text-blue-500 underline">gleec.com</a>
       </p>
     </div>
-    <div className="flex h-full py-6 items-center justify-center gap-12 flex-wrap">
+    <div className="flex h-full pb-12 md:pb-6 py-6 items-center justify-center gap-12 flex-wrap">
       {
         Sketches.map((sketch, index) => (
           <FadeIn delay={(index+1)*100} key={index} className="flex items-center justify-center w-[90%] md:w-[45%] portfolioItem">
