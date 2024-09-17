@@ -38,6 +38,7 @@ function BlurImage({ src, alt, ...props }) {
       {...props}
       src={src}
       alt={alt}
+      priority
       fill
       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"            
       className={`object-cover rounded-lg absolute ${isLoading ? 'grayscale blur-2xl' : 'grayscale-0 blur-0'}`}
