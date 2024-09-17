@@ -14,17 +14,6 @@ import { MdMailOutline } from "react-icons/md";
 import { MdArrowOutward } from "react-icons/md";
 import { TbBrandThreejs } from "react-icons/tb";
 
-const image1 = "/images/about1.jpg";
-const image2 = "/images/about2.jpg";
-const image3 = "/images/about3.jpg";
-const image4 = "/images/about4.jpg";
-const image5 = "/images/about5.jpg";
-const image6 = "/images/about6.jpg";
-const image7 = "/images/about7.jpg";
-const image8 = "/images/about8.jpg";
-const image9 = "/images/about9.jpg";
-const image10 = "/images/about10.jpg";
-
 export default function Home() {
 
   //Card Effect
@@ -87,20 +76,6 @@ export default function Home() {
 
     return () => clearInterval(timer); // Cleanup timer on component unmount
   }, []);
-
-  //Gallery
-  const images = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10
-  ];
 
   //Color  
   const [tempColor, setTempColor] = useState("rgba(255, 255, 255, 0.06)");
@@ -291,7 +266,7 @@ export default function Home() {
 
         <FadeIn className="card col-span-4 md:col-span-2 row-span-2 rounded-lg shadow-md flex items-center justify-center" delay={mobile ? 400 : 500}>
           <div className="card-content-no-padding flex items-center justify-center">            
-            <Carousel srcs={images}/>
+            <Carousel />
           </div>        
         </FadeIn>
 
