@@ -144,22 +144,6 @@ const Page = () => {
             </div>
         ))}
       </div>
-      <div className="flex flex-col justify-center items-center p-10 text-lg text-gray-400 gap-8">
-        <div className="flex flex-col justify-center items-center max-w-3xl gap-3">
-          <p>
-          I design for startups of all sizes. When you have a groundbreaking business idea, but nothing anyone can look at or click on, that’s where I come in. I do all the heavy lifting; I’ll design you a world-class brand identity, website, or whatever else you need to launch.
-          </p>
-          <p>
-          I take the unfamiliar threads of a new concept, and weave them into a context which lets them mesh gracefully into the zeitgeist with style, and meaningfully align with minds and emotions.
-          </p>
-          <p>
-          I’m a Creative Director and Designer based in New York, and have spent the last fourteen years helping to bring brands to life through thoughtful, strategic design that resonates.
-          </p>
-        </div>
-        <button className="border-2 border-[#303030] px-4 py-1 rounded-md text-gray-200 hover:bg-[#303030] hover:text-white">
-          Get in touch
-        </button>
-      </div>
     </>
   )
 }

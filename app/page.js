@@ -14,6 +14,17 @@ import { MdMailOutline } from "react-icons/md";
 import { MdArrowOutward } from "react-icons/md";
 import { TbBrandThreejs } from "react-icons/tb";
 
+const image1 = "/images/about1.jpg";
+const image2 = "/images/about2.jpg";
+const image3 = "/images/about3.jpg";
+const image4 = "/images/about4.jpg";
+const image5 = "/images/about5.jpg";
+const image6 = "/images/about6.jpg";
+const image7 = "/images/about7.jpg";
+const image8 = "/images/about8.jpg";
+const image9 = "/images/about9.jpg";
+const image10 = "/images/about10.jpg";
+
 export default function Home() {
 
   //Card Effect
@@ -79,9 +90,16 @@ export default function Home() {
 
   //Gallery
   const images = [
-    '/images/about1.jpg', '/images/about2.jpg', '/images/about3.jpg', '/images/about4.jpg',
-    '/images/about5.jpg', '/images/about6.jpg', '/images/about7.jpg', '/images/about8.jpg',
-    '/images/about9.jpg', '/images/about10.jpg'
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10
   ];
 
   //Color  
@@ -176,11 +194,11 @@ export default function Home() {
               <span className="text-gray-300 text-[2.9vw] md:text-lg">Feel free to reach out to me if you have any projects in mind, or just to say hello.</span>              
             </div>
             <div className="absolute bottom-0 left-0 m-6 flex gap-2 hero-links">
-              <Link href="">
+              <a href="https://github.com/CHope12">
                 <button className="border-2 rounded-lg px-4 py-2 bg-slate-800 text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <FaGithub />
                 </button>
-              </Link>         
+              </a>
               <Link href="">
                 <button className="border-2 rounded-lg px-4 py-2 bg-slate-800 text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <FaLinkedin />
@@ -231,7 +249,7 @@ export default function Home() {
             <div className="flex flex-col">
               <p className="text-gray-600">Socials</p>
               <p className="text-gray-300">LinkedIn</p>
-              <p className="text-gray-300">GitHub</p>
+              <a href="https://github.com/CHope12" className="text-gray-300">GitHub</a>
             </div>
             </div>
           </div>
@@ -286,7 +304,7 @@ export default function Home() {
                 backgroundImage: "url(/images/perlinparticles.jpg)", 
                 backgroundSize: "cover"              
             }}>                              
-              <p className="absolute text-white flex justify-center items-center gap-2 text-md w-full h-full"><TbBrandThreejs />Playground <MdArrowOutward /></p>                                 
+              <p className="absolute text-white flex justify-center items-center gap-2 text-[4vw] w-full h-full"><TbBrandThreejs />Playground <MdArrowOutward /></p>                                 
           </Link>
           </FadeIn>
         )}
@@ -305,8 +323,10 @@ export default function Home() {
           <div className="card-content-no-padding flex flex-col p-6">
             <div className="flex justify-between items-center">
               <p className="text-gray-600">Now</p>          
-              <div className="bg-green-500 rounded-full w-[10px] h-[10px] md:w-[1vw] md:h-[1vw] flex justify-center items-center">
-                <div className="absolute bg-green-500 bg-opacity-60 rounded-full w-[15px] h-[15px] md:w-[1.5vw] md:h-[1.5vw] animate-pulse" />
+              <div className="flex justify-center items-center">
+                <div className="bg-green-500 rounded-full w-[10px] h-[10px] md:w-[12.5px] md:h-[12.5px] flex justify-center items-center relative">
+                  <div className="absolute bg-green-500 bg-opacity-60 rounded-full w-[15px] h-[15px] md:w-[22.5px] md:h-[22.5px] animate-pulse" />
+                </div>
               </div>
             </div>            
             <p className="text-gray-400 text-[3.5vw] md:text-[1.25vw] lg:text-sm">I am currently working as a freelancer making websites and doing home computer repair services</p>            
@@ -323,7 +343,7 @@ export default function Home() {
               onMouseEnter={() => changeTempHighlightColor("rgba(239, 68, 68, 0.06)")}
               onMouseLeave={() => checkHighlightColor()}
             >
-              <div className="bg-red-500 rounded-full w-[2vw] h-[2vw]" />
+              <div className="bg-red-500 rounded-full w-[25px] h-[25px]" />
             </button>
             <button 
               className="flex justify-center items-center hover:-translate-y-0.5 ease-in-out duration-100" 
@@ -331,7 +351,7 @@ export default function Home() {
               onMouseEnter={() => changeTempHighlightColor("rgba(249, 115, 22, 0.06)")}
               onMouseLeave={() => checkHighlightColor()}
               >
-              <div className="bg-orange-500 rounded-full w-[2vw] h-[2vw]" />
+              <div className="bg-orange-500 rounded-full w-[25px] h-[25px]" />
             </button>
             <button 
               className="flex justify-center items-center hover:-translate-y-0.5 ease-in-out duration-100" 
@@ -339,7 +359,7 @@ export default function Home() {
               onMouseEnter={() => changeTempHighlightColor("rgba(234, 179, 8, 0.06)")}
               onMouseLeave={() => checkHighlightColor()}
             >
-              <div className="bg-yellow-500 rounded-full w-[2vw] h-[2vw]" />
+              <div className="bg-yellow-500 rounded-full w-[25px] h-[25px]" />
             </button>
             <button 
               className="flex justify-center items-center hover:-translate-y-0.5 ease-in-out duration-100" 
@@ -347,7 +367,7 @@ export default function Home() {
               onMouseEnter={() => changeTempHighlightColor("rgba(59, 130, 246, 0.06)")}
               onMouseLeave={() => checkHighlightColor()}
             >
-              <div className="bg-blue-500 rounded-full w-[2vw] h-[2vw]" />
+              <div className="bg-blue-500 rounded-full w-[25px] h-[25px]" />
             </button>
             <button 
               className="flex justify-center items-center hover:-translate-y-0.5 ease-in-out duration-100" 
@@ -355,7 +375,7 @@ export default function Home() {
               onMouseEnter={() => changeTempHighlightColor("rgba(34, 197, 94, 0.06)")}
               onMouseLeave={() => checkHighlightColor()}
             >
-              <div className="bg-green-500 rounded-full w-[2vw] h-[2vw]" />
+              <div className="bg-green-500 rounded-full w-[25px] h-[25px]" />
             </button>
             <button 
               className="flex justify-center items-center hover:-translate-y-0.5 ease-in-out duration-100" 
@@ -363,7 +383,7 @@ export default function Home() {
               onMouseEnter={() => changeTempHighlightColor("rgba(255, 255, 255, 0.06)")}
               onMouseLeave={() => checkHighlightColor()}
             >
-              <div className="bg-white rounded-full w-[2vw] h-[2vw]" />
+              <div className="bg-white rounded-full w-[25px] h-[25px]" />
             </button>
             </div>
           </div>        
