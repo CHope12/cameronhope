@@ -165,14 +165,12 @@ export default function Home() {
                 <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <FaGithub />
                 </button>
-              </a>
-              {/*
-              <Link href="">
+              </a>              
+              <a href="https://www.linkedin.com/in/cameronhope1/" target="_blank">
                 <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <FaLinkedin />
                 </button>
-              </Link>
-              */}
+              </a>              
               <a href="/cv.pdf" target="_blank">
                 <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <PiReadCvLogoBold />
@@ -217,7 +215,7 @@ export default function Home() {
               </div>                      
               <div className="flex flex-col">
                 <p className="text-gray-600">Links</p>
-                {/*<a href="" target="_blank" className="text-gray-300 text-[2.75vw]">LinkedIn</p>*/}
+                <a href="https://www.linkedin.com/in/cameronhope1/" target="_blank" className="text-gray-300 text-[2.75vw]">LinkedIn</a>
                 <a href="https://github.com/CHope12/" target="_blank" className="text-gray-300">GitHub</a>
                 <a href="/cv.pdf" target="_blank" className="text-gray-300">CV</a>
               </div>
@@ -386,7 +384,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col">
               <p className="text-gray-600 text-md">Links</p>
-              {/*<a href="" target="_blank" className="text-gray-300 text-[2.75vw]">LinkedIn</p>*/}
+              <a href="https://www.linkedin.com/in/cameronhope1/" target="_blank" className="text-gray-300 text-[2.75vw]">LinkedIn</a>
               <a href="https://github.com/CHope12/" target="_blank" className="text-gray-300 text-[2.75vw] underline">GitHub</a>
               <a href="./cv.pdf" target="_blank" className="text-gray-300 text-[2.75vw]">CV</a>
             </div>
