@@ -215,7 +215,7 @@ export default function Home() {
               </div>                      
               <div className="flex flex-col">
                 <p className="text-gray-600">Links</p>
-                <a href="https://www.linkedin.com/in/cameronhope1/" target="_blank" className="text-gray-300 text-[2.75vw]">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/cameronhope1/" target="_blank" className="text-gray-300">LinkedIn</a>
                 <a href="https://github.com/CHope12/" target="_blank" className="text-gray-300">GitHub</a>
                 <a href="/cv.pdf" target="_blank" className="text-gray-300">CV</a>
               </div>
