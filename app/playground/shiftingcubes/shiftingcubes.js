@@ -16,7 +16,10 @@ class Sketch{
     this.width = this.container.offsetWidth;
     this.height = this.container.offsetHeight;
     this.renderer = new THREE.WebGLRenderer( {alpha: true, antialias: true });
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 3));
+    if (this.width < 768) {
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 3));
+    }
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 1.5));
     this.renderer.setSize( this.width / this.height);
     this.renderer.setClearColor(0x000000, 1);
     this.renderer.physicallyCorrectLights = true;
@@ -196,6 +199,7 @@ class Sketch{
     scale.add(this, 'scaleForward').name('Scale Forward');
     const restart = this.gui.addFolder('Restart');
     restart.add(this, 'restart');
+    this.gui.close();
 
     //Resize
     this.setupResize();
@@ -374,7 +378,12 @@ class Sketch{
     this.width = this.container.offsetWidth;
     this.height = this.container.offsetHeight;
     this.renderer.setSize(this.width, this.height);
-    this.camera.aspect = this.width / this.height;
+    this.camera.aspect = this.width / this.height;    
+    if (this.width < 768) {
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 3));
+    } else {
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 1.5));
+    }
     this.camera.updateProjectionMatrix();
   }
 

@@ -20,8 +20,11 @@ class Sketch{
     this.container = options.dom;
     this.width = this.container.offsetWidth;
     this.height = this.container.offsetHeight;
-    this.renderer = new THREE.WebGLRenderer( {alpha: true, antialias: true });
-    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 3));
+    this.renderer = new THREE.WebGLRenderer( {alpha: true, antialias: true });    
+    if (this.width < 768) {
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 3));
+    }
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 2));
     this.renderer.setSize( this.width / this.height);
     this.renderer.setClearColor(0x111111, 1);
     this.renderer.physicallyCorrectLights = true;
@@ -115,23 +118,22 @@ class Sketch{
     simplexAmp: 0.008,
     //opacity: 0.1
     };
-    this.speedScale = 0.5;
+    this.speedScale = 2;
 
     this.gui = new GUI();
     const simplex = this.gui.addFolder('Simplex');
     simplex.add(this.params, 'simplexVariation', 0, 0.1);
     simplex.add(this.params, 'simplexAmp', 0, 0.1);
     const speed = this.gui.addFolder('Speed');
-    speed.add(this, 'speedScale', 0, 1);
+    speed.add(this, 'speedScale', 1, 5);
     /*
     const fog = this.gui.addFolder('Fog');
     fog.add(this.Fog, 'density', 0, 0.1);
     fog.add(this.Fog, 'far', 0, 100);
     fog.add(this.Fog, 'near', 0, 100);
     */
-
-
-    
+   
+    this.gui.close();
 
     //Resize
     this.setupResize();
@@ -214,6 +216,10 @@ class Sketch{
     this.height = this.container.offsetHeight;
     this.renderer.setSize(this.width, this.height);
     this.camera.aspect = this.width / this.height;
+    if (this.width < 768) {
+      this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 3));
+    }
+    this.renderer.setPixelRatio(Math.min(window.devicePixelRatio / 2));
     this.camera.updateProjectionMatrix();
     this.render();
   }

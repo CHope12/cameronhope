@@ -70,7 +70,7 @@ const techIcons = [
   {
     name: "Unity Networking",
     icon: <SiUnity />,
-    link: "https://docs.unity3d.com/Manual/UNet.html"
+    link: "https://unity.com/products/netcode"
   },
   {
     name: "C#",

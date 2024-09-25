@@ -156,6 +156,7 @@ class Sketch{
     particlesFolder.addColor(this, 'particleColor1');
     particlesFolder.addColor(this, 'particleColor2');
     particlesFolder.addColor(this, 'particleColor3');
+    this.gui.close();
 
     //Renderer
     this.container = options.dom;

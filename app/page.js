@@ -161,21 +161,23 @@ export default function Home() {
               <span className="text-gray-300 text-[2.9vw] md:text-lg">Feel free to reach out to me if you have any projects in mind, or just to say hello.</span>              
             </div>
             <div className="absolute bottom-0 left-0 m-6 flex gap-2 hero-links">
-              <a href="https://github.com/CHope12">
+              <a href="https://github.com/CHope12" target="_blank">
                 <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <FaGithub />
                 </button>
               </a>
+              {/*
               <Link href="">
                 <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <FaLinkedin />
                 </button>
               </Link>
-              <Link href="">
+              */}
+              <a href="/cv.pdf" target="_blank">
                 <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <PiReadCvLogoBold />
                 </button>
-              </Link>
+              </a>
               <a href="mailto:cameron@cameronhope.co.uk">
                 <button className="border-2 rounded-lg px-4 py-2 bg-[#141414] text-white hover:text-black hover:-translate-y-1 ease-in-out duration-300">
                   <MdMailOutline />
@@ -194,11 +196,11 @@ export default function Home() {
               <div className="flex flex-col text-[2.9vw] md:text-[1.8vw] lg:text-lg text-gray-300 leading-tight lg:leading-6">
                 <span>• JavaScript</span>
                 <span>• TypeScript</span>
-                <span>• Tailwind</span>                
+                <span>• Tailwind CSS</span>                
                 <span>• Next.js</span> 
                 <span>• C#</span>                         
               </div>
-                <p className="text-[2.8vw] md:text-[1.8vw] lg:text-lg text-gray-300">Beyond coding, I'm passionate about video games, working out, and traveling. An unusual hobby of mine is building watches, they're great for expression.</p>
+                <p className="text-[2.8vw] md:text-[1.8vw] lg:text-lg text-gray-300">Beyond coding, I'm passionate about video games, working out, and travelling. An unusual hobby of mine is building watches, they're great for expression.</p>
             </div>
           </div>        
         </FadeIn>
@@ -207,17 +209,18 @@ export default function Home() {
         <FadeIn className="card col-span-3 row-span-4 rounded-lg shadow-md flex items-center justify-center" delay={200}>        
           <div className="card-content">   
             <div className="flex flex-col p-6 gap-4">         
-            <p className="text-white text-xl font-bold">Let's start working together!</p>
-            <div className="flex flex-col">
-              <p className="text-gray-600">Contact Details</p>
-              <p className="text-gray-300 text-[1.25vw] lg:text-sm italic">cameron@cameronhope.co.uk</p>
-              <p className="text-gray-300 text-[1.25vw] lg:text-sm">England</p>   
-            </div>
-            <div className="flex flex-col">
-              <p className="text-gray-600">Socials</p>
-              <p className="text-gray-300">LinkedIn</p>
-              <a href="https://github.com/CHope12" className="text-gray-300">GitHub</a>
-            </div>
+              <p className="text-white text-xl font-bold">Let's start working together!</p>
+              <div className="flex flex-col">
+                <p className="text-gray-600">Contact Details</p>
+                <a href="mailto:cameron@cameronhope.co.uk" className="text-gray-300 text-[1.25vw] lg:text-sm italic">cameron@cameronhope.co.uk</a>
+                <p className="text-gray-300 text-[1.25vw] lg:text-sm">England</p>   
+              </div>                      
+              <div className="flex flex-col">
+                <p className="text-gray-600">Links</p>
+                {/*<a href="" target="_blank" className="text-gray-300 text-[2.75vw]">LinkedIn</p>*/}
+                <a href="https://github.com/CHope12/" target="_blank" className="text-gray-300">GitHub</a>
+                <a href="/cv.pdf" target="_blank" className="text-gray-300">CV</a>
+              </div>
             </div>
           </div>
         </FadeIn>
@@ -378,13 +381,14 @@ export default function Home() {
             <p className="text-white text-md font-bold">Let's start working together!</p>
             <div className="flex flex-col">
               <p className="text-gray-600 text-md">Contact Details</p>
-              <p className="text-gray-300 text-[2.75vw] italic">cameron@cameronhope.co.uk</p>
+              <a href="mailto:cameron@cameronhope.co.uk" className="text-gray-300 text-[2.75vw] italic">cameron@cameronhope.co.uk</a>
               <p className="text-gray-300 text-[2.75vw]">England</p>   
             </div>
             <div className="flex flex-col">
-              <p className="text-gray-600 text-md">Socials</p>
-              <p className="text-gray-300 text-[2.75vw]">LinkedIn</p>
-              <p className="text-gray-300 text-[2.75vw]">GitHub</p>
+              <p className="text-gray-600 text-md">Links</p>
+              {/*<a href="" target="_blank" className="text-gray-300 text-[2.75vw]">LinkedIn</p>*/}
+              <a href="https://github.com/CHope12/" target="_blank" className="text-gray-300 text-[2.75vw] underline">GitHub</a>
+              <a href="./cv.pdf" target="_blank" className="text-gray-300 text-[2.75vw]">CV</a>
             </div>
             </div>
           </div>
