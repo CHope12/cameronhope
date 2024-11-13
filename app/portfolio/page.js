@@ -96,15 +96,6 @@ const portfolioItems = [
     textColor: "white",
   },
   {
-    title: "Calorie Counter (Work in progress)",
-    image: "/images/screen2.jpg",
-    type: "Personal project",
-    link: "",
-    description: "A web application I created which allows users to track their daily calorie intake and set goals for their daily intake. The app features Auth0 user authentication system and a MongoDB database to store user data.",
-    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "MongoDB" || tech.name === "Node.js" || tech.name === "Express" || tech.name === "Mongoose" || tech.name === "Auth0" || tech.name === "Tailwind CSS"),
-    textColor: "black",
-  },
-  {
     title: "Finance Tracker",
     image: "/images/screen3.jpg",
     type: "Personal project",
@@ -138,6 +129,15 @@ const portfolioItems = [
     link: "https://theguidancecompany.co.uk/",
     description: "A website I made using Wordpress for a local client's potential business. It only reached a first draft however provided valuable insight into wordpress and its ecosystem",
     tech: techIcons.filter(tech => tech.name === "Wordpress"),
+    textColor: "black",
+  },  
+  {
+    title: "Calorie Counter (Work in progress)",
+    image: "/images/screen2.jpg",
+    type: "Personal project",
+    link: "",
+    description: "A web application I created which allows users to track their daily calorie intake and set goals for their daily intake. The app features Auth0 user authentication system and a MongoDB database to store user data.",
+    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "MongoDB" || tech.name === "Node.js" || tech.name === "Express" || tech.name === "Mongoose" || tech.name === "Auth0" || tech.name === "Tailwind CSS"),
     textColor: "black",
   }
 ]
