@@ -15,6 +15,7 @@ import { SiAuth0 } from "react-icons/si";
 import { FaUnity } from "react-icons/fa";
 import { SiUnity } from "react-icons/si";
 import { SiCsharp } from "react-icons/si";
+import { SiWordpress } from "react-icons/si";
 
 const techIcons = [
   {
@@ -76,6 +77,11 @@ const techIcons = [
     name: "C#",
     icon: <SiCsharp />,
     link: "https://docs.microsoft.com/en-us/dotnet/csharp/"
+  },
+  {
+    name: "Wordpress",
+    icon: <SiWordpress />,
+    link: "https://wordpress.com/"
   }
 ]
 
@@ -90,7 +96,7 @@ const portfolioItems = [
     textColor: "white",
   },
   {
-    title: "Calorie Counter (WIP)",
+    title: "Calorie Counter (Work in progress)",
     image: "/images/screen2.jpg",
     type: "Personal project",
     link: "",
@@ -115,6 +121,24 @@ const portfolioItems = [
     description: "For my final year project in university, I created a multiplayer fighting game using Unity and C#. The game features a lobby system, character selection, and fighting mechanics. Player can start a server and connect to each other over the internet using a lobby code.",
     tech: techIcons.filter(tech => tech.name === "Unity" || tech.name === "Unity Networking" || tech.name === "C#"),
     textColor: "white",
+  },
+  {
+    title: "Brikbloom Property Sourcing",
+    image: "/images/screen5.jpg",
+    type: "Freelance development",
+    link: "https://brikbloom.com",
+    description: "A website I created for a property sourcer. The website features key information about the business and a contact form.",
+    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "JavaScript" || tech.name === "Tailwind CSS"),
+    textColor: "black",
+  },
+  {
+    title: "The Guidance Company",
+    image: "/images/screen6.jpg",
+    type: "Freelance development",
+    link: "https://theguidancecompany.co.uk/",
+    description: "A website I made using Wordpress for a local client's potential business. It only reached a first draft however provided valuable insight into wordpress and its ecosystem",
+    tech: techIcons.filter(tech => tech.name === "Wordpress"),
+    textColor: "black",
   }
 ]
 
@@ -136,6 +160,7 @@ const Page = () => {
                 title={item.title}
                 image={item.image}
                 link={item.link}
+                type={item.type}
                 description={item.description}
                 tech={item.tech}
                 textColor={item.textColor}

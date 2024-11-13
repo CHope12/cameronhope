@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 
-const PortfolioCard = ({ title, image, link, description, tech, textColor }) => {  
+const PortfolioCard = ({ title, image, link, description, tech, type, textColor }) => {  
 
   return (
     <div className="relative w-full h-[250px] md:h-[350px] border-[1px] border-[#e5e7eb] border-opacity-50 rounded-lg bg-[#141414] shadow-lg overflow-hidden">
@@ -15,6 +15,7 @@ const PortfolioCard = ({ title, image, link, description, tech, textColor }) => 
         <Link href={link} target="_blank">
           <div className="relative z-10 flex flex-col justify-center items-center">
             <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center">{title}</h3>
+            <h4 className="text-md md:text-lg lg:text-xl font-bold text-center">{type}</h4>
             <p className="text-sm md:text-md lg:text-lg py-4 w-3/4 flex justify-center items-center text-white">{description}</p>        
           </div>
         </Link>      
