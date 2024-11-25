@@ -16,7 +16,6 @@ const page = () => {
 
   const handlePlay = () => {
     setPlaying(!playing);
-    console.log(playing);
   }
 
   return (    

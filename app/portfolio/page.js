@@ -16,6 +16,7 @@ import { FaUnity } from "react-icons/fa";
 import { SiUnity } from "react-icons/si";
 import { SiCsharp } from "react-icons/si";
 import { SiWordpress } from "react-icons/si";
+import { TbBrandThreejs } from "react-icons/tb";
 
 const techIcons = [
   {
@@ -82,6 +83,11 @@ const techIcons = [
     name: "Wordpress",
     icon: <SiWordpress />,
     link: "https://wordpress.com/"
+  },
+  {
+    name: "Three.js",
+    icon: <TbBrandThreejs />,
+    link: "https://threejs.org/"
   }
 ]
 
@@ -112,6 +118,15 @@ const portfolioItems = [
     description: "For my final year project in university, I created a multiplayer fighting game using Unity and C#. The game features a lobby system, character selection, and fighting mechanics. Player can start a server and connect to each other over the internet using a lobby code.",
     tech: techIcons.filter(tech => tech.name === "Unity" || tech.name === "Unity Networking" || tech.name === "C#"),
     textColor: "white",
+  },
+  {
+    title: "Art Store (Work in progress)",
+    image: "/images/screen7.png",
+    type: "Personal project",
+    link: "https://art-iota-woad.vercel.app/",
+    description: "A web application I am currently working on which will allow users to buy and sell digital art. The app features user authentication using Auth0 and data storage using MongoDB.",
+    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "MongoDB" || tech.name === "Node.js" || tech.name === "Three.js"|| tech.name === "Auth0" || tech.name === "Tailwind CSS"),
+    textColor: "black",
   },
   {
     title: "Brikbloom Property Sourcing",
