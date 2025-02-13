@@ -4,7 +4,7 @@ import Link from 'next/link'
 const PortfolioCard = ({ title, image, link, description, tech, type, textColor }) => {  
 
   return (
-    <div className="relative w-full h-[250px] md:h-[350px] border-[1px] border-[#e5e7eb] border-opacity-50 rounded-lg bg-[#141414] shadow-lg overflow-hidden">
+    <div className="relative w-full h-[250px] md:h-[350px] border-[1px] border-[#e5e7eb] border-opacity-50 rounded-lg bg-[#141414] shadow-lg overflow-hidden portfolioItem">
       <div
         className="absolute bg-cover bg-center w-full h-full opacity-50 md:opacity-55 rounded-lg hoverImage"
         style={{ 
