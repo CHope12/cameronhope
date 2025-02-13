@@ -116,14 +116,6 @@ body {
   color: rgb(20, 20, 20);
 }
 
-.portfolioItem {
-  transition: transform 0.5s ease-in-out;
-}
-
-.portfolioItem:hover{
-  transform: translateY(-3%);
-}
-
 .hoverImage {
   transition: 
     transform 0.5s ease-in-out,

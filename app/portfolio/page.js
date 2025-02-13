@@ -102,13 +102,12 @@ const portfolioItems = [
     textColor: "white",
   },
   {
-    title: "Finance Tracker",
-    image: "/images/screen3.jpg",
-    type: "Personal project",
-    link: "https://finance.cameronhope.co.uk/",
-    description: "A web application I created which allows users to track their daily, weekly and monthly expenses and income. The app features a user authentication and data storage using Firebase.",
-    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "Firebase" || tech.name === "Tailwind CSS"),
-    textColor: "black",
+    title: "Hopzag Website Development Agency",
+    image: "/images/screen8.png",
+    type: "Business project",
+    link: "https://hopzag.co.uk/",
+    description: "A website I created for my website development business. The website features my services, a portfolio of my work and a contact form.",
+    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "JavaScript" || tech.name === "Tailwind CSS" || tech.name === "Three.js"),
   },
   {
     title: "Multiplayer Fighter Game",
@@ -120,21 +119,21 @@ const portfolioItems = [
     textColor: "white",
   },
   {
-    title: "Art Store (Work in progress)",
-    image: "/images/screen7.png",
-    type: "Personal project",
-    link: "https://art-iota-woad.vercel.app/",
-    description: "A web application I am currently working on which will allow users to buy and sell digital art. The app features user authentication using Auth0 and data storage using MongoDB.",
-    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "MongoDB" || tech.name === "Node.js" || tech.name === "Three.js"|| tech.name === "Auth0" || tech.name === "Tailwind CSS"),
-    textColor: "black",
-  },
-  {
     title: "Brikbloom Property Sourcing",
     image: "/images/screen5.jpg",
     type: "Freelance development",
     link: "https://brikbloom.com",
     description: "A website I created for a property sourcer. The website features key information about the business and a contact form.",
     tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "JavaScript" || tech.name === "Tailwind CSS"),
+    textColor: "black",
+  },
+  {
+    title: "Finance Tracker",
+    image: "/images/screen3.jpg",
+    type: "Personal project",
+    link: "https://finance.cameronhope.co.uk/",
+    description: "A web application I created which allows users to track their daily, weekly and monthly expenses and income. The app features a user authentication and data storage using Firebase.",
+    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "Firebase" || tech.name === "Tailwind CSS"),
     textColor: "black",
   },
   {
@@ -146,6 +145,15 @@ const portfolioItems = [
     tech: techIcons.filter(tech => tech.name === "Wordpress"),
     textColor: "black",
   },  
+  {
+    title: "Art Store (Work in progress)",
+    image: "/images/screen7.png",
+    type: "Personal project",
+    link: "https://art-iota-woad.vercel.app/",
+    description: "A web application I am currently working on which will allow users to buy and sell digital art. The app features user authentication using Auth0 and data storage using MongoDB.",
+    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "MongoDB" || tech.name === "Node.js" || tech.name === "Three.js"|| tech.name === "Auth0" || tech.name === "Tailwind CSS"),
+    textColor: "black",
+  },
   {
     title: "Calorie Counter (Work in progress)",
     image: "/images/screen2.jpg",
@@ -168,7 +176,7 @@ const Page = () => {
         {portfolioItems.map((item, index) => (          
             <div 
               key={index}
-              className="flex items-center justify-center w-[90%] md:w-[45%] portfolioItem"
+              className="flex items-center justify-center w-[90%] md:w-[45%]"
             >          
             <FadeIn className="w-full" delay={(index+1)*100}>
               <PortfolioCard
