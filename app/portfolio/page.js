@@ -17,6 +17,10 @@ import { SiUnity } from "react-icons/si";
 import { SiCsharp } from "react-icons/si";
 import { SiWordpress } from "react-icons/si";
 import { TbBrandThreejs } from "react-icons/tb";
+import { SiTypescript  } from "react-icons/si";
+import { FaDocker } from "react-icons/fa";
+import { FaCube } from "react-icons/fa";
+
 
 const techIcons = [
   {
@@ -28,6 +32,11 @@ const techIcons = [
     name: "JavaScript",
     icon: <FaJs />,
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+  },
+  {
+    name: "TypeScript",
+    icon: <SiTypescript />,
+    link: "https://www.typescriptlang.org/"
   },
   {
     name: "Node.js",
@@ -88,10 +97,29 @@ const techIcons = [
     name: "Three.js",
     icon: <TbBrandThreejs />,
     link: "https://threejs.org/"
+  },
+  {
+    name: "Docker",
+    icon: <FaDocker />,
+    link: "https://www.docker.com/"
+  },
+  {
+    name: "RunPod",
+    icon: <FaCube  />,
+    link: "https://www.runpod.io/"
   }
 ]
 
 const portfolioItems = [
+  {
+    title: "DreamCapture",
+    image: "/images/screen10.png",
+    type: "Personal project",
+    link: "https://dreamcapture.cameronhope.co.uk/",
+    description: "DreamCapture lets users record their dreams and receive AI-generated interpretations. The app features secure user authentication and cloud-based data storage via Firebase. It leverages a custom serverless API hosted on RunPod, integrating OpenAI’s API to enhance dream interpretations for DynaVisionXL dream generation. Additionally, Three.js is used to render immersive 360-degree dream visuals, allowing users to explore AI-generated dreamscapes in a fully interactive experience.",
+    tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "Firebase" || tech.name === "Docker" || tech.name === "RunPod" || tech.name === "Tailwind CSS" || tech.name === "TypeScript" || tech.name === "Three.js"),
+    textColor: "black",
+  },
   {
     title: "Photography Portfolio Website",
     image: "/images/screen1.jpg",
