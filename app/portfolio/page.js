@@ -115,7 +115,7 @@ const portfolioItems = [
     title: "DreamCapture",
     image: "/images/screen10.png",
     type: "Personal project",
-    link: "https://dreamcapture.cameronhope.co.uk/",
+    link: "https://dreamcapture.vercel.app/",
     description: "DreamCapture lets users record their dreams and receive AI-generated interpretations. The app features secure user authentication and cloud-based data storage via Firebase. It leverages a custom serverless API hosted on RunPod, integrating OpenAI’s API to enhance dream interpretations for DynaVisionXL dream generation. Additionally, Three.js is used to render immersive 360-degree dream visuals, allowing users to explore AI-generated dreamscapes in a fully interactive experience.",
     tech: techIcons.filter(tech => tech.name === "Next.js" || tech.name === "Firebase" || tech.name === "Docker" || tech.name === "RunPod" || tech.name === "Tailwind CSS" || tech.name === "TypeScript" || tech.name === "Three.js"),
     textColor: "black",
